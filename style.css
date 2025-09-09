@@ -12,6 +12,7 @@ body {
   align-items: center;
   height: 100vh;
   background-color: #212121;
+  padding: 10px;
 }
 
 .icon-table-list {
@@ -20,7 +21,8 @@ body {
 
 .todo-app {
   background-color: #fff;
-  width: 400px;
+  max-width: 400px;
+  width: 90%;
   border-radius: 10px;
   text-align: center;
   box-shadow: 0 8px 25px rgba(250, 249, 249, 0.2);
@@ -28,17 +30,17 @@ body {
 
 #todo-heading {
   display: flex;
-  flex-direction: row;
   align-items: center;
   background-color: blueviolet;
   gap: 10px;
-  padding: 20px 20px 15px 40px;
+  padding: 15px 20px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
 
-#todo-heading ,.icon-table-list, h1{
+.icon-table-list, h1{
     font-family: "Passero One", sans-serif;
+    font-size: clamp(18px, 4vw, 28px);
 }
 
 #todo-input-container {
