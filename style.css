@@ -117,12 +117,38 @@ li.completed {
 }
 
 @media (max-width: 480px) {
+  body {
+    align-items: center; /* center the app vertically */
+    padding: 10px;
+  }
+
+  .todo-app {
+    width: 100%;
+    max-width: 360px;
+  }
+
   #todo-input-container {
     flex-direction: column;
-    align-items: stretch;
+    gap: 8px;
+    margin: 12px;
   }
 
   #add-btn {
     width: 100%;
+    padding: 10px;
+  }
+
+  #todo-list {
+    max-height: 200px; /* fit better on small height devices */
+  }
+
+  li {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .delete-btn {
+    padding: 4px 6px;
+    font-size: 12px;
   }
 }
