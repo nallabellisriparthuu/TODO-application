@@ -112,6 +112,10 @@ li.completed {
   cursor: pointer;
 }
 
+#delete:hover{
+  background: rgb(211, 33, 36, 0.5)
+}
+
 @media (max-width: 480px) {
   #todo-input-container {
     flex-direction: column;
