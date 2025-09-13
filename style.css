@@ -102,30 +102,38 @@ li.completed {
   opacity: 0.7;
 }
 
-#task-checkbox{
+.task-checkbox{
   margin-right: 10px;
   transform: scale(1.2);
   cursor: pointer;
 }
 
-#btn-cont{
+.btn-cont{
   display: flex;
   gap: 8px;
   margin-left: auto;
 }
 
-#edit-btn {
+.edit-btn {
   outline: none;
   border: 2px solid #212121;
   border-radius: 5px;
   padding: 5px 8px;
-  margin-left: 10px;
   background: rgb(33, 211, 101);
   color: #fff;
   cursor: pointer;
 }
 
-#delete-btn {
+.edit-input{
+  flex: 1;
+  padding: 5px;
+  margin-right: 5px;
+  border: 2px solid #212121;
+  border-radius: 5px;
+  font-family: cursive;
+}
+
+.delete-btn {
   outline: none;
   border: 2px solid #212121;
   border-radius: 5px;
@@ -136,6 +144,9 @@ li.completed {
   cursor: pointer;
 }
 
-#delete:hover{
+.delete:hover{
   background: rgb(211, 33, 36, 0.5)
 }
+
+
+
