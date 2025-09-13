@@ -32,29 +32,40 @@ document.addEventListener("DOMContentLoaded", ()=>{
   function renderTask(task) {
     const li = document.createElement("li");
     li.setAttribute("data-id", task.id);
-    if(task.completed){
-        li.classList.add("completed");
-        return;
-    }
-    li.innerHTML = `
-    <span>${task.text}</span>
-    <button id="delete"><i class="fa-solid fa-trash"></i></button>
-    `
-    li.addEventListener("click", (e)=>{
-        if(e.target.tagName === "BUTTON"){
-            return;
-        }
-        task.completed = !task.completed;
-        li.classList.toggle("completed");
-        saveTask();
-    });
+    
+    //checkbox
+    let checkBox = document.createElement("input");
+    checkBox.type = "checkbox";
+    checkBox.classList.add("task-checkbox")
+    checkBox.checked = task.completed;
 
-    li.querySelector("#delete").addEventListener("click", (e)=>{
-        e.stopPropagation() //prevenet toggle for firing
-        tasks = tasks.filter(t => t.id !== task.id)
-        li.remove();
-        saveTask()
-    })
+    //Task text
+    let taskText = document.createElement("span");
+    taskText.textContent = task.text;
+    if(task.completed){
+      li.classList.add("completed")
+    }
+
+    //div container for button
+    let divBtn = document.createElement("div");
+    divBtn.classList.add("btn-container")
+
+    //edit button
+    let editBtn = document.createElement("button");
+    editBtn.classList.add("edit-btn");
+    editBtn.innerHTML = `<i class="fa-regular fa-pen-to-square"></i>`
+
+    //delete button
+    let deleteBtn = document.createElement("button");
+    deleteBtn.classList.add("delete-dtn");
+    deleteBtn.innerHTML = `<i class="fa-solid fa-trash"></i>`
+
+    //append button
+    divBtn.appendChild(editBtn)
+    divBtn.appendChild(deleteBtn)
+
+    //append on li all the elements
+    li.appendChild()
 
     todoList.appendChild(li)
   }
