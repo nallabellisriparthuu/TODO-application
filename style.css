@@ -46,7 +46,7 @@ body {
   margin: 20px;
   display: flex;
   flex-direction: row;
-  width: width: calc(100% - 40px);;
+  width: calc(100% - 40px);
 }
 
 #todo-input {
@@ -116,39 +116,40 @@ li.completed {
   background: rgb(211, 33, 36, 0.5)
 }
 
-@media (max-width: 480px) {
-  body {
-    align-items: center; /* center the app vertically */
-    padding: 10px;
-  }
 
-  .todo-app {
-    width: 100%;
-    max-width: 360px;
-  }
+/* --- new styles for checkbox and edit --- */
+.btn-container {
+  display: flex;
+  gap: 8px;
+  margin-left: auto; /* pushes buttons to the right */
+}
 
-  #todo-input-container {
-    flex-direction: column;
-    gap: 8px;
-    margin: 12px;
-  }
 
-  #add-btn {
-    width: 100%;
-    padding: 10px;
-  }
+.task-checkbox {
+  margin-right: 10px;
+  transform: scale(1.2);
+  cursor: pointer;
+}
 
-  #todo-list {
-    max-height: 200px; /* fit better on small height devices */
-  }
+.edit-btn {
+  outline: none;
+  border: 2px solid #212121;
+  border-radius: 5px;
+  padding: 5px 8px;
+  margin-left: 20px;
+  background: #4caf50;
+  color: #fff;
+  cursor: pointer;
+}
 
-  li {
-    font-size: 14px;
-    padding: 8px;
-  }
+.edit-btn:hover {
+  background: rgba(76, 175, 80, 0.7);
+}
 
-  .delete-btn {
-    padding: 4px 6px;
-    font-size: 12px;
-  }
+.edit-input {
+  flex: 1;
+  padding: 5px;
+  border: 2px solid #212121;
+  border-radius: 5px;
+  font-family: cursive;
 }
